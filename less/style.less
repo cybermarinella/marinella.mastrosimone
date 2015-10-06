@@ -1,0 +1,251 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,100,700,500,300italic);
+@import url(http://fonts.googleapis.com/css?family=Abel);
+
+/* ============================ SETUP ============================ */
+@red: #00ff00;
+@green: #ff0000;
+@blu: #0000ff;
+
+@grigio_chiaro:#e7e7e8;
+@grigio_scuro:#c3c4c7;
+
+@space: 15px;
+
+/* Mixin */
+.transition (@prop: all, @time: 1s, @ease: linear) {
+	-webkit-transition: @prop @time @ease;
+	-moz-transition: @prop @time @ease;
+	-o-transition: @prop @time @ease;
+	-ms-transition: @prop @time @ease;
+	transition: @prop @time @ease;
+}
+
+/* ============================ GENERIC ============================ */
+
+.bk_red{ background: @red; }
+.bk_green{ background: @green;}
+.bk_blue{ background: @blu;}
+
+.text_red{color: @red;}
+.text_green{color: @green;}
+.text_blue{color: @blu;}
+
+.border-top{	border-top: 1px solid @grigio_chiaro; padding-top: @space; margin-top:@space; }
+.full-width {width: 100%; display:inline-block;}
+.no-bullet{
+	padding: 0;
+	margin: 0;
+	li{list-style: none;}
+}
+
+/* ============================ EFFETTI ============================ */
+//https://coveloping.com/tools/css-filter-generator
+
+.css-filters-blur{ 
+    -webkit-filter: blur(5px); 
+    filter: blur(5px);
+    .transition(all, 0.5s, ease-in);
+    &:hover{
+    	.transition(all, 0.2s, ease-in);
+    	-webkit-filter: blur(0); 
+    	filter: blur(0);
+    }
+}
+
+.css-filters-gray{
+	-webkit-filter: grayscale(100%); 
+    filter: grayscale(100%);
+    .transition(all, 0.5s, ease-in);
+    &:hover{
+    	.transition(all, 0.2s, ease-in);
+    	-webkit-filter: grayscale(0); 
+    	filter: grayscale(0);
+    }
+}
+
+.opacity_40{
+	opacity: 0.6;
+    .transition(all, 0.5s, ease-in);
+    &:hover{
+    	.transition(all, 0.2s, ease-in);
+    	opacity: 1;
+    }
+}
+
+.left{float: left;}
+.right{float: right;}
+.stars{float: right;}
+
+a{ color: @grigio_scuro !important }
+
+.text-align-center{ text-align: center;}
+
+.no-margin-top{margin-top: 0;}
+.highcharts-container{padding: 0;}
+.logo_small{
+	float: left;
+	margin-right: 15px;
+	height: 30px;
+}
+
+#login{
+	.modal-dialog {
+	      width: 90%;
+	      height: 90%;
+	      padding: 0;
+	      margin: 0 5%;
+	}
+	.modal-content {    
+	      height: 100%;
+	      border-radius: 0;
+	      color:white;
+	      overflow:hidden;
+	}
+}
+
+
+html{
+	body{
+		max-width: 1200px;
+		margin: 0 auto;
+		p{
+			font-size: 16px;
+		}
+		h3{ 
+			margin-top: 0 ;
+			font-size: 12px;
+			text-transform: uppercase;
+			color: @grigio_scuro;
+		}
+		img {  display: block;  height: auto;  max-width: 100%; }
+		.occhio{ 
+			width: 100%;
+			text-align: center;
+			img{
+				position: absolute;
+				max-width: 330px;
+				margin: 0 auto;
+				left: 50%;
+				margin-left: -40%;
+				float: none;
+			}
+		}
+
+		.red, .green, .blue{ 
+			display: none; 
+		}
+		.righine{
+			width: 100%;
+			position: relative;
+			z-index: 5;
+			float: left;
+			top: 0;
+			cursor: pointer;
+			overflow: hidden;
+
+			.bianco{
+				width: 100%;
+				background: #fff;
+				margin-left: -100%;
+				float: left;
+			}
+		}
+		.animazione{
+			width: 100%;
+			position: relative;
+			z-index: 0;
+			float: left;
+			margin-left: -100%;
+		}
+
+		div.eyes {
+			  height:60px;
+			  width:60px;
+			  left:50%;
+			  top:0;
+			  position:absolute;
+			  margin:37% auto 0 -30px;
+			  z-index: 1;  
+		}
+
+		div.left_eye,
+		div.right_eye {
+		    width: 55px;
+		    height: 55px;
+		    top: 0;
+		    position: absolute;
+		    background-repeat: no-repeat;
+		    background-position: center center;
+		}
+		div.eyes div.pupil {
+		    left: 15px;
+		    top: 15px;
+		    width: 30px;
+		    height: 30px;
+		    position: relative;
+		    z-index: 0;
+		    background-image: url("../img/occhio_pupilla_js.png");
+		    background-repeat: no-repeat;
+		    background-position: center center;         
+		}
+		#circular div.left_eye,
+		#circular div.right_eye {
+		    background-image: url("../img/occhio_sopra_js.png");
+		    z-index:2;
+		   // border: 3px solid #fff;
+		    &:hover{
+		    	cursor: pointer;
+		    	background-image: url("../img/occhio_sopra_hover_js.png");
+		    }
+		}
+
+		.preferred{
+			padding-bottom: 0;
+			img{ margin-bottom: 15px; margin-top: 10px; }
+			p{margin: 0;}
+		}
+
+		.interessi{
+			span{
+				color: #ccc;
+			}
+			i.fa{
+				border-radius: 50%;
+				height: 51px;
+				width: 51px;
+				padding: 15px;
+				color:#fff;
+				font-size: 21px;
+				background: @grigio_scuro;
+				&:hover{
+					-webkit-transform: rotateY(190deg); /* Safari */
+    				transform: rotateY(190deg);
+    				background: red;
+    				.transition(all, 0.2s, ease-in);
+    				cursor: pointer;
+				}
+			}
+		}
+	}
+}
+
+/* ============================ START LESS ============================ */
+
+html{
+	padding:30px;
+	body{
+		font-family: 'Roboto', sans-serif;
+		font-family: 'Abel', sans-serif;
+		font-size: 16px;
+		header{
+			img{
+				//max-height: 45px;
+			}
+		}
+
+		footer{
+			text-align: center;
+			font-style: italic;
+		}
+	}
+}

@@ -1,0 +1,54 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,100,700,500,300italic);
+@import url(http://fonts.googleapis.com/css?family=Abel);
+
+/* ============================ SETUP ============================ */
+@red: #00ff00;
+@green: #ff0000;
+@blu: #0000ff;
+
+@grigio_chiaro:#e7e7e8;
+@grigio_scuro:#c3c4c7;
+
+@space: 15px;
+
+/* ============================ GENERIC ============================ */
+
+.bk_red{ background: @red; }
+.bk_green{ background: @green;}
+.bk_blue{ background: @blu;}
+
+.text_red{color: @red;}
+.text_green{color: @green;}
+.text_blue{color: @blu;}
+
+.border-top{	border-top: 1px solid @grigio_chiaro; padding-top: @space; margin-top:@space; }
+.full-width {width: 100%; display:inline-block;}
+
+.no-margin-top{margin-top: 0;}
+html{
+	body{
+		h3{ margin-top: 0 ; font-size: 12px;}
+		img {  display: block;  height: auto;  max-width: 100%; }
+	}
+}
+
+/* ============================ START LESS ============================ */
+
+html{
+	padding:30px;
+	body{
+		font-family: 'Roboto', sans-serif;
+		font-family: 'Abel', sans-serif;
+		font-size: 16px;
+		header{
+			img{
+				max-height: 45px;
+			}
+		}
+
+		footer{
+			text-align: center;
+			font-style: italic;
+		}
+	}
+}

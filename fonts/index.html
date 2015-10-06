@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet/less" type="text/css" href="less/style.less" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js"></script>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+    <script type="text/javascript">
+
+    $(function() {
+    // Create the first chart
+     
+    $('#chart-A').highcharts({
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: ''
+        },
+        subtitle: {
+            text: ''
+        },
+        xAxis: {
+            categories: ['Idea', 'Rapid Prototype', 'Agile Method', 'User Interface', 'Data Visualization','Stampa', 'Audio/Video', 'Responsive Design', 'Web App', 'Programmazione', 'Cms Template']
+        },
+        yAxis: {
+            max: 10,
+        },
+        legend: {
+            enabled: false
+        },
+        exporting: { 
+          enabled: false 
+        },
+        credits: {
+            enabled: false,
+        },
+        tooltip: {
+          pointFormat: '<span style="color:{point.color}">{point.name}</span><b>{point.y:.2f}</b><br/>',
+        },
+        series: [{
+            name: '',
+            data: [10, 8, 9.5, 8, 10, 10, 10, 7, 10, 8.5],
+        colorByPoint: true,
+            
+        }]
+    });
+
+    $('#chart-B').highcharts({
+        chart: {
+            type: 'bubble',
+            zoomType: 'xy'
+        },
+        title: {
+            text: '' // Title for the chart
+        },
+        legend: {
+            enabled: false
+        },
+        exporting: { 
+          enabled: false 
+        },
+        credits: {
+            enabled: false,
+        },
+        colorByPoint: true,
+        series: [{
+            data: [[97, 36, 79], [94, 74, 60], [68, 76, 58], [64, 87, 56], [68, 27, 73], [74, 99, 42], [7, 93, 87], [51, 69, 40], [38, 23, 33], [57, 86, 31]]
+        }, {
+            data: [[25, 10, 87], [2, 75, 59], [11, 54, 8], [86, 55, 93], [5, 3, 58], [90, 63, 44], [91, 33, 17], [97, 3, 56], [15, 67, 48], [54, 25, 81]]
+        }, {
+            data: [[47, 47, 21], [20, 12, 4], [6, 76, 91], [38, 30, 60], [57, 98, 64], [61, 17, 80], [83, 60, 13], [67, 78, 75], [64, 12, 10], [30, 77, 82]]
+        }]
+    });
+
+    $('#chart-C').highcharts({
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: 0,
+            plotShadow: false
+        },
+        title: {
+            text: '',
+        },
+        legend: {
+            enabled: false
+        },
+        exporting: { 
+          enabled: false 
+        },
+        credits: {
+            enabled: false,
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                dataLabels: {
+                    enabled: true,
+                    distance: -50,
+                    style: {
+                        fontWeight: 'bold',
+                        color: 'white',
+                        textShadow: '0px 1px 2px black'
+                    }
+                },
+                startAngle: -90,
+                endAngle: 90,
+                center: ['50%', '75%']
+            }
+        },
+        series: [{
+            type: 'pie',
+            name: 'Browser share',
+            innerSize: '50%',
+            data: [
+                ['Firefox',   10.38],
+                ['IE',       56.33],
+                ['Chrome', 24.03],
+                ['Safari',    4.77],
+                ['Opera',     0.91],
+                {
+                    name: 'Proprietary or Undetectable',
+                    y: 0.2,
+                    dataLabels: {
+                        enabled: false
+                    }
+                }
+            ]
+        }]
+    });
+});
+
+
+    </script>
+    
+    <title>Marinella Mastrosimone | UI/UX Designer</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header class="border-top no-margin-top">
+      <div class="row">
+        <div class="col-md-4">
+          <img src="img/logo_nome.png">
+        </div>
+        <div class="col-md-4">Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit. </div>
+        <div class="col-md-4">
+          <a class="" href="https://twitter.com/cybermarinella"><i class="fa fa-twitter-square"></i> @doloretultrices</a>
+          <a class=" full-width" href="https://it.linkedin.com/in/cybermarinella"><i class="fa fa-linkedin-square"></i> consectetur  adipiscing</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4"><img src="img/logo_ruolo.png"></div>
+        <div class="col-md-4">
+          <span class="border-top full-width">Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit.</span>
+        </div>
+        <div class="col-md-4">
+          <a class="border-top full-width" href="mailto:marinella.mastrosimone@gmail.com"><i class="fa fa-envelope-square"></i> doloretultrices@vulputate</a>
+          <span class="full-width"><i class="fa fa-phone-square"></i> 347.3044568</a></span>
+        </div>
+      </div>
+    </header>
+    <div class="border-top" role="main">
+      <div class="row">
+        <div class="col-md-4">
+          <div>La passione e la curiosità guidano le mie scelte professionali. Ottimizzo interfacce dal secolo scorso, prima che esistesse il ruolo di“UX/UI Designer”. Lorem ipsum dolor sit amet, consectetur adipiscing elit. t eget magna sollicitudin, malesuada velit vitae, iaculis sapien. Quisque eleifend est sem, et porta nisl convallis congue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum ultrices, urna nec commodo sagittis, nisl leo mollis urna, a blandit elit nisl a mauris. Fusce pulvinar, nulla eget </div>
+          <div class="border-top full-width">
+            <img src="img/personalità.png">
+          </div>
+        </div>
+        <div class="col-md-4"><img src="img/occhio.png"></div>
+        <div class="col-md-4">
+          <div id="chart-A" style="min-width: 310px; max-width: 800px; width:100%; height: 400px; margin: 0 auto"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="border-top full-width">
+                <h3>Font preferito</h3>
+                <p>Nato in Germania fra il 1928 e il 1931</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="border-top full-width">
+                <h3>Colore preferito</h3>
+                <p>Il 60% dei notri recettori ottici è dedicato al rosso</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="border-top full-width">
+                <h3>Interessi</h3>
+                <p>Nato in Germania fra il 1928 e il 1931</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="border-top full-width">
+                <h3>Cose in cui credo</h3>
+                <p>Il 60% dei notri recettori ottici è dedicato al rosso</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- FINE COLONNA 1-->
+        <div class="col-md-4">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="border-top full-width">
+                <h3>Lingua Inglese</h3>
+                <p>Nato in Germania fra il 1928 e il 1931</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="border-top full-width">
+                <h3>Attitudini</h3>
+                <p>Il 60% dei notri recettori ottici è dedicato al rosso</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="border-top full-width">
+                <h3>Ambiti Professionali</h3>
+                <div id="chart-C" style="min-width: 310px; max-width: 800px; width:100%; height: 250px; margin: 0 auto"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- FINE COLONNA 2-->
+        <div class="col-md-4">
+          <span class="border-top full-width">
+            <h3>Cosa uso di più</h3>
+            <div id="chart-B" style="min-width: 310px; max-width: 800px; width:100%; margin: 0 auto"></div>
+          </span>
+        </div>
+        <!-- FINE COLONNA 3-->
+      </div>
+    </div>
+    <footer class="border-top">“Conservare lo spirito dell'infanzia dentro di sé per tutta la vita, vuol dire conservare la curiosità di conoscere, il piacere di capire, la voglia di comunicare“ B. Munari</footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/hicharts/highcharts.js"></script>
+    <script src="js/hicharts/highcharts-more.js"></script>
+<script src="js/hicharts/modules/exporting.js"></script>
+  </body>
+</html>

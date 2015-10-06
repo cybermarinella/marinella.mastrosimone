@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+	<style>
+	body {
+		font-family: Helvetica, Arial, sans-serif;
+	}
+	h1 {
+		font-size: 20px;
+	}
+	div {
+		width: 100%;
+	}
+	img[usemap] {
+		border: none;
+		height: auto;
+		max-width: 100%;
+		width: auto;
+	}
+	</style>
+
+<body>
+<img src="img/occhio.png" width="805" height="809" usemap="#Map" border="0" />
+<map name="Map" id="Map">
+  <area shape="poly" coords="276,501,278,483,281,469,286,454,293,437,302,419,309,405,319,389,330,375,339,362,356,347,370,335,383,324,395,316,403,312,415,319,427,329,442,341,452,350,464,363,477,377,488,393,495,406,504,420,511,435,516,449,523,466,526,480,529,501,513,507,501,512,482,519,463,525,448,528,423,532,403,532,374,532,351,527,330,522,311,516,295,510" href="#" alt="occhio" />
+  <area shape="poly" coords="401,312,410,304,426,296,442,290,462,285,484,278,509,275,529,274,555,273,572,275,589,278,609,282,629,289,648,295,664,305,664,321,659,344,649,365,643,381,634,402,623,419,611,439,593,458,575,471,560,482,550,493,535,502,530,506,523,477,516,450,506,427,495,401,481,382,460,356,441,339,422,325" href="#" alt="Video"/>
+  <area shape="poly" coords="141,308,143,323,147,337,151,348,156,361,160,370,163,379,170,388,174,399,180,409,187,423,199,436,209,450,218,460,231,469,240,478,252,486,262,493,274,500,275,500,276,489,280,475,285,459,291,440,297,425,306,410,314,396,322,386,332,373,340,363,352,352,360,343,372,334,381,326,389,319,399,313,388,307,375,299,358,293,345,288,332,283,319,281,301,278,286,276,267,276,251,276,236,277,220,279,205,282,193,286,176,291,160,298,151,302" href="#" alt="Stampa" />
+  <area shape="poly" coords="401,770,414,764,426,755,443,742,456,729,470,715,484,698,494,680,505,659,514,637,522,615,528,590,532,567,532,546,533,530,533,516,529,501,513,511,495,517,469,524,447,527,426,531,400,533,376,532,349,528,326,522,306,516,291,510,280,504,275,499,273,513,273,531,272,554,274,580,278,603,283,621,289,639,296,654,304,673,316,693,329,708,343,726,361,740,375,754" href="#" alt="Web" />
+  <area shape="circle" coords="403,265,266" href="#" alt="User Experience"/>
+     <area shape="circle" coords="267,542,266" href="#" alt="Sviluppo" />
+     <area shape="circle" coords="540,543,266" href="#" alt="Grafica">
+</map>
+<script src="./Responsive Image Maps jQuery Plugin_files/jquery.min.js"></script>
+<script src="./Responsive Image Maps jQuery Plugin_files/jquery.rwdImageMaps.min.js"></script>
+<script>
+$(document).ready(function(e) {
+	$('img[usemap]').rwdImageMaps();
+	
+	$('area').on('click', function() {
+		alert($(this).attr('alt') + ' clicked');
+	});
+});
+</script>
+
+
+<script type="text/javascript">(function () {
+        return window.SIG_EXT = {};
+      })()</script></body></html>
