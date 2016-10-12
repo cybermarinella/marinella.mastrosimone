@@ -256,6 +256,9 @@
     <script src="jquery.rwdImageMaps.min.js"></script>
 
     <script type="text/javascript">
+
+    var h = window.innerHeight;
+
     $(document).ready(function(){
       $('.carousel').carousel();
       $(".content").click(function(event){
@@ -264,8 +267,6 @@
 
       $("body, .eyes").click(function(event){
         $("html, body").animate({ scrollTop: 0 }, 1000);
-        $("h1").text("Interface designer");
-        $(".menu a").removeClass("active");
 
         $('.sfoca').removeClass('css-filters-gray');
         $('#chart-A1').removeClass('css-filters-gray opacity_40');
@@ -278,26 +279,17 @@
 
         event.stopPropagation();
       });
+
       $('.scrollToOne').click(function(){
-        $("html, body").animate({ scrollTop: $(window).height() }, 1000);
-        $("h1").text("Competenze");
-        $(".menu a").removeClass("active");
-        $(".scrollToOne").addClass("active");
-         
+        $("html, body").animate({ scrollTop: $(window).height() }, 1000);         
         event.stopPropagation();
       });
       $('.scrollToTwo').click(function(event){
         $("html, body").animate({ scrollTop: $(window).height()*2 }, 1000);
-        $("h1").text("Esperienza");
-        $(".menu a").removeClass("active");
-        $(".scrollToTwo").addClass("active");
         event.stopPropagation();
       });
       $('.scrollToTree').click(function(event){
         $("html, body").animate({ scrollTop: $(window).height()*3 }, 1000);
-         $("h1").text("Codice Inutile");
-        $(".menu a").removeClass("active");
-        $(".scrollToTree").addClass("active");
         event.stopPropagation();
       });
 
@@ -321,20 +313,42 @@
 
     $(window).on('scroll', function (event) {
         var scrollPosition = $(document).scrollTop();
-        pixs = scrollPosition / 200;
+        pixs = scrollPosition / 300;
         var piys = pixs*10;
         $("#virtualBk").css({"-webkit-filter": "blur("+pixs+"px)","filter": "blur("+pixs+"px)" });
        
 
-        
-        if(scrollPosition > 200){
+        console.log("height"+ h +"; scroll position" + scrollPosition)
+
+        if(scrollPosition > h/5){
           $("#topMenu").fadeIn("Slow");
           $("#mainMenu").fadeOut("Slow");
-          //console.log(scrollPosition)
+          $("h1").text("Interface designer");
+          $(".menu a").removeClass("active");
           event.stopPropagation();
+          
+          if(scrollPosition > h-h/2){ //// Competenze
+            $("h1").text("Competenze");
+            $(".menu a").removeClass("active");
+            $(".scrollToOne").addClass("active");
+            
+            if(scrollPosition > h*2-h/2){ /// Esperienza
+              $("h1").text("Esperienza");
+              $(".menu a").removeClass("active");
+              $(".scrollToTwo").addClass("active");
+              
+              if(scrollPosition > h*3-h/2){ /// Codice Inutile
+                $("h1").text("Codice Inutile");
+                $(".menu a").removeClass("active");
+                $(".scrollToTree").addClass("active");
+              }
+            }
+          }
         }else{
           $("#topMenu").fadeOut("Slow");
           $("#mainMenu").fadeIn("Slow");
+          $("h1").text("Interface designer");
+          $(".menu a").removeClass("active");
           event.stopPropagation();
         }
 
