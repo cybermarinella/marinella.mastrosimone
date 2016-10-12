@@ -295,13 +295,25 @@ footer{
   color: #777;
   font-size: 1.3rem;
   font-weight: 300;
+  opacity: 0.5;
+  -moz-transition: all 500ms ease-out;
+  -webkit-transition: all 500ms ease-out;
+  -o-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
+}
+
+footer:hover{
+  opacity: 1;
+  -moz-transition: all 0 ease-out;
+  -webkit-transition: all 0 ease-out;
+  -o-transition: all 0 ease-out;
+  transition: all 0 ease-out;
 }
 
 footer .menu{
   padding: 0;
-  margin: 15px;
-  width: 100%;
- font-size: 1.5rem;
+  margin: 15px 0;
+  font-size: 1.5rem;
 }
 
 footer span{

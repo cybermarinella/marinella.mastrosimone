@@ -16,7 +16,7 @@
 var d = new Date();
 var n = d.getHours();
 
-
+//n=5
 
 
 	function preload() {  // preload() runs once
@@ -26,7 +26,9 @@ var n = d.getHours();
 	function setup() {
 		var mybody = document.getElementsByTagName("body")[0];
 		var myname = document.getElementsByTagName("h2")[0];
-		//frameRate(100);
+		var myfooter = document.getElementById("closure");
+		var mymenu = document.getElementsByTagName("a");
+
 		var myCanvas = createCanvas(windowWidth, windowHeight);
 	  	myCanvas.parent('virtualBk');
 		strokeWeight(0.3);
@@ -45,9 +47,15 @@ var n = d.getHours();
 			gray = 100;
 			bk_color = 40;
 			mcolor = 150;
-			mybody.style.background = "#000";
+			mybody.style.background = "#282828";
 			mybody.style.color = "#efefef";
+			myfooter.style.background = "#282828";
+			myfooter.style.color = "#efefef";
 			myname.style.color = "#fff";
+			var i;
+			for (i = 0; i < mymenu.length; i++) {
+			    mymenu[i].style.color = "#efefef";
+			}
 		}
 	}
 
