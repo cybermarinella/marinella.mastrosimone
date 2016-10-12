@@ -1,7 +1,7 @@
     $(function() {
         var colors = [
         '#3d59a8', '#0e58a5', '#2b96b6', '#54c5cb',
-        '#00b442', '#34c420', '#90d30e', '#b9e100',
+        '#01a84e', '#34c420', '#90d30e', '#b9e100',
         '#ff0000', '#f37029', '#f79125', '#ffc31a', 
         '#ef61a3'
         ]
@@ -24,7 +24,7 @@
             series: [{
                 name: '',
                 data: [
-                    {y: 10, color: colors[0], livello: "Per avere buone idee bisogna avere molte idee"},
+                    {y: 10, color: colors[0], livello: "Per avere buone idee <br> bisogna avere molte idee"},
                     {y: 8, color: colors[1], livello:"Buono"},
                     {y: 9.5, color: colors[2], livello:"Molto Buono"},
                     {y: 8, color: colors[3], livello:"Buono"},
@@ -257,8 +257,10 @@
             renderTo: 'container',
             type: 'bubble',
             zoomType: 'xy',
+            lineWidth:0,
             style: {
-                fontFamily: 'Roboto'
+                //fontFamily: 'Roboto',
+                //fontWeight:100;
             }
         },
         title: {
@@ -266,7 +268,6 @@
         },
         yAxis: {
             gridLineWidth: 0,
-            max: 130,
             title: {
                 text: null,
             },
@@ -276,6 +277,10 @@
         },
         xAxis: {
             gridLineWidth: 0,
+            lineWidth: 0,
+            tickLength: 0,
+            minorTickLength: 0,
+            minorGridLineWidth: 0,
             title: {
                 text: null,
             },
@@ -289,6 +294,12 @@
             enabled: false
         },
         plotOptions: {
+            bubble:{
+              marker: {
+                lineWidth:0,
+                fillOpacity: 0.8
+                }
+              },
             series: {
                 animation: {
                     duration: 2000,
@@ -307,8 +318,7 @@
             useHTML: true,
             fontFamily:'Roboto',
             headerFormat: '<table style="z-index:20; text-transform:uppercase">',
-            pointFormat: '<tr><td style="color: {series.color}">{point.name}:</td>' +
-            '<td><b> {point.livello}</b></td></tr>',
+            pointFormat: '<tr><td>{point.name}:</td></tr>' + '<td><b> {point.livello}</b></td></tr>',
             footerFormat: '</table>',
             valueDecimals: 0
         },
@@ -324,45 +334,51 @@
             },
                 data: [
                     {
-                        "x": 108,
+                        "x": 200,
                         "y": 54,
-                        "z": 100,
-                        "name":"Html5, css",
+                        "z": 50,
+                        "name":"Html5, Sass, Less",
                         "livello":"Ottimo"
                     },{
-                        "x": 122,
+                        "x": 240,
                         "y": 28,
-                        "z": 100,
+                        "z": 50,
                         "name":"Wordpress",
                         "livello":"Ottimo"
                     },{
-                        "x": 143,
-                        "y": 79,
-                        "z": 20,
+                        "x": 180,
+                        "y": 30,
+                        "z": 7,
                         "name":"Node Js",
                         "livello":"Discreto"
                     },{
-                        "x": 107,
-                        "y": 115,
-                        "z": 20,
+                        "x": 200,
+                        "y": 10,
+                        "z": 7,
                         "name":"Angular JS",
                         "livello":"Discreto"
                     },{
-                        "x": 133,
+                        "x": 220,
                         "y": 0,
-                        "z": 4,
+                        "z": 8,
                         "name":"Javascript",
-                        "livello":"Iniziale"
+                        "livello":"In Avanzamento"
                     },{
-                        "x": 110,
-                        "y": 30,
-                        "z": 90,
+                        "x": 230,
+                        "y": 70,
+                        "z": 30,
+                        "name":"MySql",
+                        "livello":"Molto Buono"
+                    },{
+                        "x": 210,
+                        "y": 20,
+                        "z": 25,
                         "name":"jQuery",
                         "livello":"Molto Buono"
                     },{
-                        "x": 110,
-                        "y": -5,
-                        "z": 70,
+                        "x": 250,
+                        "y": 54,
+                        "z": 35,
                         "name":"Php",
                         "livello":"Buono"
                     }
@@ -380,27 +396,34 @@
             },
             data: [
                 {
-                    "x": 46,
-                    "y": 0,
-                    "z": 70,
+                    "x": 140,
+                    "y": 10,
+                    "z": 50,
                     "name":"Prepress",
                     "livello":"Buono"
+                }, 
+                {
+                    "x": 160,
+                    "y": 10,
+                    "z": 50,
+                    "name":"Acrobat Pro",
+                    "livello":"Buono"
                 }, {
-                    "x": 90,
+                    "x": 140,
                     "y": 50,
-                    "z": 80,
+                    "z": 50,
                     'name':'Photoshop',
                     "livello":"Molto Buono"
                 }, {
-                    "x": 70,
-                    "y": 65,
-                    "z": 80,
+                    "x": 120,
+                    "y": 30,
+                    "z": 55,
                     "name":"InDesign",
                     "livello":"Molto Buono"
                 }, {
-                    "x": 63,
-                    "y": 22,
-                    "z": 90,
+                    "x": 150,
+                    "y": 60,
+                    "z": 60,
                     "name":"Illustrator",
                     "livello":"Molto Buono"
                 }
@@ -416,21 +439,39 @@
                 style:{color:grigio}
             },
             data: [{
-                "x": 90,
+                "x": 133,
                 "y": 90,
-                "z": 8,
+                "z": 10,
                 "name":"After Effects",
-                "livello":"Molto Buono"
+                "livello":"Buono"
             }, {
-                "x": 90,
+                "x": 150,
                 "y": 120,
-                "z": 6,
+                "z": 9,
                 'name':'Premiere',
                 "livello":"Discreto"
             }, {
-                "x": 95,
-                "y": 140,
-                "z": 5,
+                "x": 130,
+                "y": 65,
+                "z": 28,
+                'name':'Balsamiq',
+                "livello":"Ottimo"
+            }, {
+                "x": 150,
+                "y": 80,
+                "z": 25,
+                'name':'UXPin',
+                "livello":"Ottimo"
+            }, {
+                "x": 150,
+                "y": 50,
+                "z": 25,
+                'name':'Invision',
+                "livello":"Ottimo"
+            }, {
+                "x": 100,
+                "y": 120,
+                "z": 7,
                 "name":"Aebleton Live",
                 "livello":"Discreto"
             }], name:"Audio/Video", color: colors[0],
@@ -464,7 +505,10 @@
             enabled: false,
         },
         tooltip: {
-            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            useHTML: true,
+            headerFormat: '<table style="z-index:20; text-transform:uppercase">',
+            pointFormat: '<tr><td>{point.name}:</td></tr>' + '<td><b>{point.percentage:.1f}% </b></td></tr>',
+            footerFormat: '</table>',
         },
         plotOptions: {
             pie: {
@@ -481,14 +525,15 @@
         },
         series: [{
             type: 'pie',
-            name: 'Browser share',
+            name: '',
             innerSize: '70%',
+
             data: [
-            ['Finanza',10.38],
-            ['Educational',       56.33],
-            ['Software', 24.03],
-            ['Healtcare',    4.77],
-            ['Legal',     10.91],
+            ['Healtcare', 5 ],
+            ['Legal', 10],
+            ['Finanza',35],
+            ['Istruzione',10],
+            ['Software', 20],
             {
                 name: '',
                 y: 0.2,
@@ -500,3 +545,4 @@
         }]
     });
 });
+

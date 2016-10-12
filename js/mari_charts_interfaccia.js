@@ -1,22 +1,40 @@
-$("html").click(function(){
+var isActive = false;
+
+$("body, .content").click(function(){
+    // this actions are mooved to index.html
+    $('g').attr('class' , '');
+
     $('.sfoca').removeClass('css-filters-gray');
     $('#chart-A1').removeClass('css-filters-gray opacity_40');
     $('#chart-A2').removeClass('css-filters-gray opacity_40');
     $('#chart-A3').removeClass('css-filters-gray opacity_40');
-
+    
     var chart = $('#chart-B').highcharts();
     $(chart.series).each(function(){
         this.setVisible(true, true);
     });
-    chart.redraw();
 });
 
+$('g').on('mouseover', function(event) {
+    $('g').attr('class' , 'inactive');
+    $(this).attr('class' , ''); 
+})
+$('g').on('click', function(event) {
+    $('g').attr('class' , 'inactive');
+    $(this).attr('class' , 'active'); 
+})
+$('g').on('mouseout', function(event) {
+   // $(this).attr('class' , 'inactive');
+    //$('.active').attr('class' , 'active');
+})
       
-  
-$('area#UserExperience').on('mouseover', function(event) {
+
+$('#UserExperience').on('mouseover', function(event) {
     event.stopPropagation();
-    $('.all').hide();
-    $('.blue').show();
+});
+$('#UserExperience').on('click', function(event) {
+    event.stopPropagation();
+   
     $('.sfoca').addClass('css-filters-gray');
     $('#chart-A1').removeClass('opacity_40 css-filters-gray');
     $('#chart-A1').removeClass('opacity_40 css-filters-gray ');
@@ -28,28 +46,17 @@ $('area#UserExperience').on('mouseover', function(event) {
         this.setVisible(false, false);
     });
     chart.series[2].show();
-    chart.redraw();
 });
-$('area#UserExperience').on('mouseout', function(event) {
+$('#UserExperience').on('mouseout', function(event) {
     event.stopPropagation();
-    $('.blue').hide();
-    $('.all').show();
-    $('.sfoca').removeClass('css-filters-gray');
-    $('#chart-A1').removeClass('css-filters-gray opacity_40');
-    $('#chart-A2').removeClass('css-filters-gray opacity_40');
-    $('#chart-A3').removeClass('css-filters-gray opacity_40');
-
-    var chart = $('#chart-B').highcharts();
-    $(chart.series).each(function(){
-        this.setVisible(true, true);
-    });
-    chart.redraw();
 });
 
-$('area#Grafica').on('mouseover', function(event) {
+$('#Grafica').on('mouseover', function(event) {
     event.stopPropagation();
-    $('.all').hide();
-    $('.green').show();
+});
+$('#Grafica').on('click', function(event) {
+    event.stopPropagation();
+
     $('.sfoca').addClass('css-filters-gray');
     $('#chart-A1').addClass('opacity_40 css-filters-gray');
     $('#chart-A2').removeClass('opacity_40 css-filters-gray');
@@ -60,28 +67,17 @@ $('area#Grafica').on('mouseover', function(event) {
         this.setVisible(false, false);
     });
     chart.series[1].show();
-    chart.redraw();
 });
-$('area#Grafica').on('mouseout', function(event) {
+$('#Grafica').on('mouseout', function(event) {
     event.stopPropagation();
-    $('.all').show();
-    $('.green').hide();
-    $('.sfoca').removeClass('css-filters-gray');
-    $('#chart-A1').removeClass('css-filters-gray opacity_40');
-    $('#chart-A2').removeClass('css-filters-gray opacity_40');
-    $('#chart-A3').removeClass('css-filters-gray opacity_40');
-
-    var chart = $('#chart-B').highcharts();
-    $(chart.series).each(function(){
-        this.setVisible(true, true);
-    });
-    chart.redraw();
 });
 
-$('area#Sviluppo').on('mouseover', function() {
+$('#Sviluppo').on('mouseover', function(event) {
     event.stopPropagation();
-    $('.red').show();
-    $('.all').hide();
+});
+$('#Sviluppo').on('click', function(event) {
+    event.stopPropagation();
+
     $('.sfoca').addClass('css-filters-gray');
     $('#chart-A1').addClass('opacity_40 css-filters-gray');
     $('#chart-A2').addClass('opacity_40 css-filters-gray');
@@ -92,20 +88,7 @@ $('area#Sviluppo').on('mouseover', function() {
         this.setVisible(false, false);
     });
     chart.series[0].show();
-    chart.redraw();
 });
-$('area#Sviluppo').on('mouseout', function(event) {
+$('#Sviluppo').on('mouseout', function(event) {
     event.stopPropagation();
-    $('.all').show();
-    $('.red').hide();
-    $('.sfoca').removeClass('css-filters-gray');
-    $('#chart-A1').removeClass('css-filters-gray opacity_40');
-    $('#chart-A2').removeClass('css-filters-gray opacity_40');
-    $('#chart-A3').removeClass('css-filters-gray opacity_40');
-
-    var chart = $('#chart-B').highcharts();
-    $(chart.series).each(function(){
-        this.setVisible(true, true);
-    });
-    chart.redraw();
 });

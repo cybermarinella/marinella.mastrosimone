@@ -1,0 +1,282 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1024, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!--link rel="stylesheet/less" type="text/css" href="less/style.less" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js"></script-->
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/p5.js/latest/p5.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.21/addons/p5.dom.min.js"></script>
+    <script type="text/javascript" src="js/mari_p5Top.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <title>Marinella Mastrosimone | UI/UX Designer</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="css/style.css" rel="stylesheet"/>
+
+  </head>
+  <body>
+            <!-- Modal -->
+    <div class="modal fade " id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel"><img class="logo_small" src="img/logo.png">Certificazioni</h4>
+          </div>
+          <div class="modal-body">
+            <div id="certificazioni" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                  <img  data-toggle="modal" data-target="#myModal" src="img/certificazioni/certificate_of_membership_no_7627_2015_2.jpg" alt="The Ultimate Guide to Visual Perception - Best in class - ">
+                </div>
+                <div class="item ">
+                  <img  data-toggle="modal" data-target="#myModal" src="img/certificazioni/certificate_of_membership_no_7627_2015.jpg" alt="Information visualization:Getting Dashboard Right">
+                </div>
+                <div class="item">
+                  <img src="img/certificazioni/Coursera-hciucsd-2014.jpg" alt="Human Computer Interaction">
+                </div>
+              </div>
+              <a class="left carousel-control" href="#certificazioni" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right carousel-control" href="#certificazioni" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id='myContainer'></div>
+    <div class="contenitore" role="main" >
+      <div class="row boxMenu">
+        <a href="#" class="logo"><img src="img/logo_nome.png" ></a>
+        <ul class="menu">
+          <li><a href="#" class="scrollToMenu"><i class="fa fa-pie-chart"></i> Profilo</a></li>
+          <li><a href="#" class="scrollToCodiceInutile"><i class="fa fa-asterisk"></i> Codice Inutile</a></li>
+          <li class="divisore"><a href="mailto:marinella.mastrosimone@gmail.com"><i class="fa fa-envelope"></i> Contatti</a></li>
+        </ul>
+      </div>
+    </div>    
+    <div class="border-top contenitore" role="main" id="main_menu" style="padding-top: 30px;">
+      <div class="row ">
+        <div class="col-md-4">
+            <h3>Cosa uso di più</h3>
+            <div id="chart-B" class="" style="min-width: 310px; max-width: 800px; width:100%; height: 300px; margin: 0 auto"></div>
+        </div>
+        <div class="col-md-4">
+          <div id="circular" class="eyes">
+              <div class="left_eye"></div>
+              <div class="pupil" id="pupil"></div>
+          </div>
+          <div class="occhio">
+            <img src="img/occhio_red.png" usemap="#Map" border="0" class="red"/>
+            <img src="img/occhio_green.png" usemap="#Map" border="0" class="green"/>
+            <img src="img/occhio_blue.png" usemap="#Map" border="0" class="blue"/>
+            <img src="img/occhio.png" usemap="#Map" border="0" class="all"/>
+            <map name="Map" id="Map">
+              <area shape="poly" coords="276,501,278,483,281,469,286,454,293,437,302,419,309,405,319,389,330,375,339,362,356,347,370,335,383,324,395,316,403,312,415,319,427,329,442,341,452,350,464,363,477,377,488,393,495,406,504,420,511,435,516,449,523,466,526,480,529,501,513,507,501,512,482,519,463,525,448,528,423,532,403,532,374,532,351,527,330,522,311,516,295,510" href="#" alt="occhio" />
+              <area shape="poly" coords="401,312,410,304,426,296,442,290,462,285,484,278,509,275,529,274,555,273,572,275,589,278,609,282,629,289,648,295,664,305,664,321,659,344,649,365,643,381,634,402,623,419,611,439,593,458,575,471,560,482,550,493,535,502,530,506,523,477,516,450,506,427,495,401,481,382,460,356,441,339,422,325" href="#" alt="Video" id="Video"/>
+              <area shape="poly" coords="141,308,143,323,147,337,151,348,156,361,160,370,163,379,170,388,174,399,180,409,187,423,199,436,209,450,218,460,231,469,240,478,252,486,262,493,274,500,275,500,276,489,280,475,285,459,291,440,297,425,306,410,314,396,322,386,332,373,340,363,352,352,360,343,372,334,381,326,389,319,399,313,388,307,375,299,358,293,345,288,332,283,319,281,301,278,286,276,267,276,251,276,236,277,220,279,205,282,193,286,176,291,160,298,151,302" href="#" alt="Stampa" id="Stampa" />
+              <area shape="poly" coords="401,770,414,764,426,755,443,742,456,729,470,715,484,698,494,680,505,659,514,637,522,615,528,590,532,567,532,546,533,530,533,516,529,501,513,511,495,517,469,524,447,527,426,531,400,533,376,532,349,528,326,522,306,516,291,510,280,504,275,499,273,513,273,531,272,554,274,580,278,603,283,621,289,639,296,654,304,673,316,693,329,708,343,726,361,740,375,754" href="#" alt="Web" id="Web" />
+              <area shape="circle" coords="403,265,266" alt="User Experience" id="UserExperience"/>
+              <area shape="circle" coords="267,542,266" alt="Grafica" id="Grafica"/>
+              <area shape="circle" coords="540,543,266" alt="Sviluppo" id="Sviluppo" />
+            </map>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h3>Cosa so fare</h3>
+          <div id="chart-A1" class="sfoca" style="min-width: 310px; max-width: 800px; width:100%; height: 110px; margin: 0 auto"></div>
+          <div id="chart-A2" class="sfoca" style="min-width: 310px; max-width: 800px; width:100%; height: 110px; margin: 0 auto"></div>
+          <div id="chart-A3" class="sfoca" style="min-width: 310px; max-width: 800px; width:100%; height: 110px; margin: 0 auto"></div>
+        </div>
+      </div>
+      <div class="row smallText">
+        <div class="col-md-4 sfoca">
+          <div class="row">
+            <div class="col-md-6 preferred">
+              <div class="border-top full-width">
+                <h3>Font preferito</h3>
+                <p><img src="img/img_din.png">Nato fra il 1928 e il 1931. Ancora modernissimo!</p>
+              </div>
+            </div>
+            <div class="col-md-6 preferred">
+              <div class="border-top full-width">
+                <h3>Colore preferito</h3>
+                <p style="margin-bottom:0;"><img src="img/img_red.png">Il 60% dei notri recettori ottici è dedicato al rosso.</p>
+              </div>
+            </div>
+          </div>
+          <div class="row smallText">
+            <div class="col-md-6">
+              <div class="border-top full-width ">
+                <h3>Interessi</h3>
+                <div class="interessi text-align-center">
+                  <i class="fa fa-microphone interessiTooltip" data-toggle="tooltip" data-placement="top" title="Musica e grafica si contendono il primo posto fra le mie passioni: www.musetta.co.uk"></i>
+                  <i class="fa fa-film interessiTooltip" data-toggle="tooltip" data-placement="top" title="Il mio film preferito è Miracolo a Milano (1951), amo anche le più recenti serie TV"></i>
+                  <i class="fa fa-cutlery interessiTooltip" data-toggle="tooltip" data-placement="top" title="A qualcuno importa se non si vede il sale quando il cibo è saporito? Certo che no. Ma la sostanza sta nel sale!"></i>
+                </div>
+                <div class="interessi text-align-center">
+                  <i class="fa fa-rocket interessiTooltip" data-toggle="tooltip" data-placement="top" title="Scienza e fantascienza hanno immaginato il nostro presente, avrei voluto fare l'astronauta"></i>
+                  <i class="fa fa-motorcycle interessiTooltip" data-toggle="tooltip" data-placement="top" title="Il bello di viaggiare è il viaggio, la meta è solo un pretesto"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <!-- Slider -->
+              <div class="border-top full-width">
+                <h3>Certificazioni</h3>
+                <div id="certificazioni" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                      <img  data-toggle="modal" data-target="#myModal" src="img/certificazioni/certificate_of_membership_no_7627_2015_2.jpg" alt="The Ultimate Guide to Visual Perception - Best in class - ">
+                    </div>
+                    <div class="item ">
+                      <img data-toggle="modal" data-target="#myModal" src="img/certificazioni/certificate_of_membership_no_7627_2015.jpg" alt="Information visualization:Getting Dashboard Right">
+                    </div>
+                    <div class="item">
+                      <img data-toggle="modal" data-target="#myModal" src="img/certificazioni/coursera-cover.png" alt="Human Computer Interaction">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- FINE COLONNA 1-->
+        <div class="col-md-4 sfoca">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="border-top full-width">
+                <h3>Lingua Inglese</h3>
+                <ul class="no-bullet">
+                  <li>Comprensione <div class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div></li>
+                  <li>Lettura <div class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></div></li>
+                  <li>Scrittura <div class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></div></li>
+                  <li>Conversazione <div class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></div></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="border-top full-width">
+                <h3>Attitudini</h3>
+                <ul class="no-bullet">
+                  <li>ProblemSolving <div class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div></li>
+                  <li>Iniziativa <div class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div></li>
+                  <li>Affidabilità <div class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div></li>
+                  <li>Empatia <div class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="border-top full-width">
+                <h3>Ambiti Professionali</h3>
+                <div id="chart-C" class="css-filters-gray" style="padding: 0; min-width: 310px; max-width: 800px; width:100%; height: 140px; margin: 0 auto -60px;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- FINE COLONNA 2-->
+        <div class="col-md-4">
+          <span class="border-top full-width">
+            <div>L'esperienza acquisita in web, multimedia e nella <strong class="textRed">progettazione di interfacce</strong> mi permette di lavorare con competenza come UX/UI Designer. <br>Con passione e pignoleria progetto e realizzo in team schermate minimali <strong class="textRed">che valorizzano i contenuti</strong>.<br>
+            Ho lavorato per importanti progetti (Mediaset, Sony, Omnitel, Feltrinelli, FCA, Università degli Studi di Milano) e ho presentato prodotti Macromedia/Adobe in note fiere del settore, oltre ad aver tenuto corsi di interactive design.<br>
+            Il diploma di Tecnico della Grafica e della Pubblicità,<br> frequenti corsi di formazione su <strong>percezione visiva,</strong><br><strong>interazione uomo-macchina</strong> uniti ad una buona conoscenza della lingua inglese, completano il mio profilo.<br><br>
+            <a href="material/2015_cv_marinella.mastrosimone1.5.pdf" class="textRed"><i class="fa fa-download"></i> Scarica il mio CV</a>
+          </div>
+          </span>
+        </div>
+      </div>
+      <div class="row border-top footer">
+          <div class="col-md-12">
+            <i>“Conservare lo spirito dell'infanzia dentro di sé per tutta la vita, vuol dire conservare la curiosità di conoscere, il piacere di capire, la voglia di comunicare“ B. Munari</i>
+          </div>
+      </div>
+      <div class="row border-top">
+        <p data-height="600" data-theme-id="0" data-slug-hash="qbxejv" data-default-tab="result" data-user="cybermarinella" class='codepen'>See the Pen <a href='http://codepen.io/cybermarinella/pen/qbxejv/'>Retini 2016</a> by cybermarinella (<a href='http://codepen.io/cybermarinella'>@cybermarinella</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+          <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+      </div>
+    <footer class="border-top">
+      <ul class="menu bottom ">
+        <li class="divisore"><a href="https://it.linkedin.com/in/cybermarinella" target="_blank"><i class="fa fa-linkedin-square"></i> Linkedin</a></li>
+        <li><a href="https://it.pinterest.com/cybermarinella/" target="_blank"><i class="fa fa-pinterest"></i> Pinterest</a></li>
+        <li class="divisore"><a href="https://www.interaction-design.org/marinella_mastrosimone" target="_blank"><i class="fa fa-graduation-cap"></i> Interaction Design Fundation</a></li>
+      </ul>
+    </footer>
+    <div class="row border-top">
+      <div>
+        <small>
+          2016 Cybermarinella
+        </small>
+      </div>
+    </div>
+        <!-- FINE COLONNA 3-->
+      </div>
+
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/hicharts/highcharts.js"></script>
+    <script src="js/hicharts/highcharts-more.js"></script>
+    <script src="js/hicharts/modules/exporting.js"></script>
+    <script src="jquery.rwdImageMaps.min.js"></script>
+
+    <!--script src="js/mari_occhio.js"></script-->
+    <script src="js/mari_charts.js"></script>
+    <script src="js/mari_charts_interfaccia.js"></script>
+
+        <script type="text/javascript">
+    $(document).ready(function(){
+      $('.carousel').carousel();
+      $('img[usemap]').rwdImageMaps();
+      $('.scrollToMenu').click(function(){
+        $("html, body").animate({ scrollTop: $(window).height()-70 }, 1000);
+      });
+      $('.scrollToCodiceInutile').click(function(){
+        $("html, body").animate({ scrollTop: $(window).height()+780 }, 1000);
+      });
+      
+      $('.eyes,.logo').click(function(){
+        $("html, body").animate({ scrollTop: 0 }, 1000);
+      });
+      
+      $('.interessiTooltip').tooltip();
+    });
+    </script>
+  </body>
+</html>
+
+            <!--?xml-stylesheet type="text/css" href="svg-stylesheet.css" ?>   
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+               width="330px" height="330px" viewBox="0 0 330 330" enable-background="new 0 0 330 330" xml:space="preserve">
+            <path class="blu" fill="#55B848" d="M217.12,204.16c0.89,5.6,1.37,11.33,1.37,17.19c0,39.75-21.47,74.49-53.49,93.43
+              c16.32,9.65,35.38,15.22,55.75,15.22C281.09,330,330,281.35,330,221.35c0-41.24-23.1-77.11-57.13-95.51
+              C267.46,159.71,246.32,188.37,217.12,204.16z"/>
+            <path fill="#ED1F24" d="M0,221.35C0,281.35,48.91,330,109.25,330c20.37,0,39.43-5.56,55.75-15.22
+              c-32.03-18.94-53.49-53.69-53.49-93.43c0-5.85,0.48-11.58,1.37-17.19c-29.2-15.8-50.34-44.45-55.75-78.33
+              C23.09,144.24,0,180.11,0,221.35z"/>
+            <path fill="#FBED17" d="M218.49,221.35c0-5.85-0.48-11.58-1.37-17.19c-15.49,8.38-33.25,13.14-52.12,13.14
+              c-18.88,0-36.63-4.76-52.12-13.14c-0.89,5.6-1.37,11.33-1.37,17.19c0,39.75,21.47,74.49,53.49,93.43
+              C197.03,295.84,218.49,261.09,218.49,221.35z"/>
+            <path fill="#3D58A6" d="M165,127.91c16.32-9.65,35.38-15.22,55.75-15.22c18.87,0,36.63,4.76,52.12,13.14
+              c0.89-5.6,1.37-11.33,1.37-17.18C274.25,48.64,225.34,0,165,0C104.66,0,55.75,48.64,55.75,108.65c0,5.85,0.48,11.59,1.37,17.18
+              c15.49-8.38,33.25-13.14,52.12-13.14C129.62,112.69,148.68,118.26,165,127.91z"/>
+            <path fill="#2BB1E6" d="M165,127.91c27.31,16.16,46.93,43.81,52.12,76.25c29.2-15.8,50.34-44.45,55.75-78.33
+              c-15.49-8.38-33.25-13.14-52.12-13.14C200.38,112.69,181.32,118.26,165,127.91z"/>
+            <path fill="#EF62A2" d="M112.88,204.16c5.19-32.45,24.81-60.09,52.12-76.25c-16.32-9.65-35.38-15.22-55.75-15.22
+              c-18.87,0-36.63,4.76-52.12,13.14C62.54,159.71,83.68,188.37,112.88,204.16z"/>
+            </svg-->
