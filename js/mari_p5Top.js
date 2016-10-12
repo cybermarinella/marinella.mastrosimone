@@ -74,6 +74,7 @@ var n = d.getHours();
 		logo_m();
 		pop();
 	}
+
 	function logo_gen(){
 		translate(width/2, height/2);
 		logo_genX = map(mouseX, width/2-100, width/2+100, 0, 360);
@@ -114,8 +115,12 @@ var n = d.getHours();
 		
 		noStroke();
 		translate(spicchioXRandom, spicchioYRandom);
-		ellipse(0+mouseX/8, 0+mouseY/8, 60, 60)
-		ellipse(30-mouseX/8, 75-mouseY/8, 30, 30)
+		//ellipse(0+mouseX/8, 0+mouseY/8, 60, 60)
+		//ellipse(30-mouseX/8, 75-mouseY/8, 30, 30)
+
+		ellipse(get_mouseY()/1.618, get_mouseX()/1.618, 60, 60)
+		ellipse(30-get_mouseX()/8, 75-get_mouseY()/8, 30, 30)
+		
 		
 		beginShape();
   		vertex(0, 0);
@@ -125,7 +130,7 @@ var n = d.getHours();
 
 		stroke(150);
 		strokeWeight(1)
-		line(0+mouseX/8, 0+mouseY/8, 30-mouseX/8, 75-mouseY/8);
+		line(get_mouseY()/1.618, get_mouseX()/1.618, 30-get_mouseX()/8, 75-get_mouseY()/8);
 	}
 	function pelini(){
 		separator = width/18;
@@ -160,6 +165,15 @@ var n = d.getHours();
 		spicchioYRandom = randomGaussian(-80, -80);
 		pop()
 	}
+
+function get_mouseX() {
+  return int(abs(map(mouseX, 0, width, -width/2, width/2)))
+}
+
+function get_mouseY() {
+  return int(abs(map(mouseY, 0, height, -height/2, height/2)))
+}
+
 
 
 /* =============== pupil ===================== */
